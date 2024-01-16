@@ -1,0 +1,28 @@
+.auth__input {
+    width: 100%;
+    margin: 0 auto 30px;
+    padding: 0 0 13px;
+    border-bottom: 2px solid rgb(204, 204, 204);
+    outline: none;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    font-family: "Inter", "Arial", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    background-color: transparent;
+    color: #FFFFFF;
+}
+
+.auth__input:-webkit-autofill,
+.auth__input:-webkit-autofill:hover,
+.auth__input:-webkit-autofill:focus {
+  -webkit-text-fill-color: #FFFFFF;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+.auth__input:last-of-type {
+    margin-bottom: 230px;
+}

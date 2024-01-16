@@ -1,0 +1,17 @@
+.profile__box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 22px 0 0 0;
+    padding: 0;
+    align-items: flex-start;
+    position: relative;
+}
+
+@media (max-width: 880px) {
+    .profile__box {
+        justify-content: center;
+        align-items: center;
+        margin: 22.25px 0 0;
+    }
+}
