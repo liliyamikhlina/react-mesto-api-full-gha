@@ -14,6 +14,7 @@ function Api(data) {
   // Загружаем информацию о пользователе с сервера
   const getUserInfo = () => {
     return fetch(`${_baseUrl}/users/me`, {
+      credentials: "include",
       headers: _headers,
     }).then((res) => {
       return checkResponseStatus(res);
@@ -23,6 +24,7 @@ function Api(data) {
   // Загружаем карточки с сервера
   const getInitialCards = () => {
     return fetch(`${_baseUrl}/cards`, {
+      credentials: "include",
       headers: _headers,
     }).then((res) => {
       return checkResponseStatus(res);
@@ -33,6 +35,7 @@ function Api(data) {
   const editProfile = (data) => {
     return fetch(`${_baseUrl}/users/me`, {
       method: 'PATCH',
+      credentials: "include",
       headers: _headers,
       body: JSON.stringify({
         name: data.name,
@@ -45,6 +48,7 @@ function Api(data) {
   const addCard = (data) => {
     return fetch(`${_baseUrl}/cards`, {
       method: "POST",
+      credentials: "include",
       headers: _headers,
       body: JSON.stringify({
         name: data.place,
@@ -59,6 +63,7 @@ function Api(data) {
   const deleteCard = (id) => {
     return fetch(`${_baseUrl}/cards/${id}`, {
       method: 'DELETE',
+      credentials: "include",
       headers: _headers,
     }).then(checkResponseStatus);
   };
@@ -67,6 +72,7 @@ function Api(data) {
   const likeCard = (id) => {
     return fetch(`${_baseUrl}/cards/${id}/likes`, {
       method: 'PUT',
+      credentials: "include",
       headers: _headers,
     }).then(checkResponseStatus);
   };
@@ -75,6 +81,7 @@ function Api(data) {
   const dislikeCard = (id) => {
     return fetch(`${_baseUrl}/cards/${id}/likes`, {
       method: 'DELETE',
+      credentials: "include",
       headers: _headers,
     }).then(checkResponseStatus);
   };
@@ -83,6 +90,7 @@ function Api(data) {
   const changeAvatar = (data) => {
     return fetch(`${_baseUrl}/users/me/avatar`, {
       method: 'PATCH',
+      credentials: "include",
       headers: _headers,
       body: JSON.stringify({
         avatar: data.link,
@@ -103,9 +111,8 @@ function Api(data) {
 }
 
 const api = new Api({
-  baseUrl: 'https://mesto.nomoreparties.co/v1/cohort-71',
+  baseUrl: 'http://localhost:3000',
   headers: {
-      authorization: '9c1cf152-056e-4431-8276-6546daba52e3',
       'Content-Type': 'application/json'
   }
 });

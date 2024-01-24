@@ -1,5 +1,5 @@
 function AuthApi() {
-  const baseUrl = "https://auth.nomoreparties.co";
+  const baseUrl = "http://localhost:3000";
   const headers = {
     "Content-Type": "application/json",
   };
@@ -25,6 +25,7 @@ function AuthApi() {
   const loginUser = (email, password) => {
     return fetch(`${baseUrl}/signin`, {
       method: "POST",
+      credentials: "include",
       headers: headers,
       body: JSON.stringify({ email, password }),
     })
@@ -32,7 +33,7 @@ function AuthApi() {
         return checkResponseStatus(res);
       })
       .then((data) => {
-        localStorage.setItem("token", data.token);
+        localStorage.setItem("userId", data._id);
         return data;
       });
   };
@@ -40,10 +41,8 @@ function AuthApi() {
   const getToken = (token) => {
     return fetch(`${baseUrl}/users/me`, {
       method: "GET",
-      headers: {
-        ...headers,
-        Authorization: `Bearer ${token}`,
-      },
+      credentials: "include",
+      headers: headers,
     }).then((res) => {
       return checkResponseStatus(res);
     });

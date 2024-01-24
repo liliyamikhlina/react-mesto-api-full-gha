@@ -105,19 +105,19 @@ function App() {
   };
 
   function signOut() {
-    localStorage.removeItem("token");
+    localStorage.removeItem("userId");
     setIsLoggedIn(false);
   }
 
   const handleTokenCheck = () => {
-    if (localStorage.getItem("token")) {
-      const jwt = localStorage.getItem("token");
+    if (localStorage.getItem("userId")) {
+      const jwt = localStorage.getItem("userId");
       authApi
         .getToken(jwt)
         .then((res) => {
           if (res) {
             setIsLoggedIn(true);
-            setEmail(res.data.email);
+            setEmail(res.email);
             navigate("/", { replace: true });
           } else {
             setIsLoggedIn(false);
