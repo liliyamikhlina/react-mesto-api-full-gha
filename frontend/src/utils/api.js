@@ -111,7 +111,7 @@ function Api(data) {
 }
 
 const api = new Api({
-  baseUrl: 'http://localhost:3000',
+  baseUrl: 'api.liliyamikhlina.nomoredomainsmonster.ru',
   headers: {
       'Content-Type': 'application/json'
   }
