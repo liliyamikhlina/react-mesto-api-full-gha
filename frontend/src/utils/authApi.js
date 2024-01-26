@@ -1,5 +1,5 @@
 function AuthApi() {
-  const baseUrl = "api.liliyamikhlina.nomoredomainsmonster.ru";
+  const baseUrl = "http://localhost:3000";
   const headers = {
     "Content-Type": "application/json",
   };
