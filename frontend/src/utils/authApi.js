@@ -2,7 +2,6 @@ function AuthApi() {
   const baseUrl = "https://api.liliya.mikhlina.nomoredomainsmonster.ru";
   const headers = {
     "Content-Type": "application/json",
-    'Access-Control-Allow-Origin': 'https://liliya.mikhlina.nomoredomainsmonster.ru'
   };
 
   const checkResponseStatus = (res) => {
