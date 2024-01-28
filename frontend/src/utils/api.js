@@ -111,7 +111,7 @@ function Api(data) {
 }
 
 const api = new Api({
-  baseUrl: 'http://api.liliya.mikhlina.nomoredomainsmonster.ru',
+  baseUrl: 'https://api.liliya.mikhlina.nomoredomainsmonster.ru',
   headers: {
       'Content-Type': 'application/json'
   }
