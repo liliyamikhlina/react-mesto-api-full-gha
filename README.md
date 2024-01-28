@@ -9,8 +9,8 @@
 
 ## Ссылки на проект
 
-IP 84.252.128.140
+IP 158.160.118.1
 
-Frontend https://liliyamikhlina.nomoredomainsmonster.ru
+Frontend https://liliya.mikhlina.nomoredomainsmonster.ru
 
-Backend https://api.liliyamikhlina.nomoredomainsmonster.ru
+Backend https://api.liliya.mikhlina.nomoredomainsmonster.ru

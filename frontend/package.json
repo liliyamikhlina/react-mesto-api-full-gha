@@ -17,7 +17,7 @@
     "build": "react-scripts --openssl-legacy-provider build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "deploy": "npm run build && scp -r ./build/* liliya_mikhlina@84.252.128.140:"
+    "deploy": "npm run build && scp -r ./build/* liliya_mikhlina@158.160.118.1:/home/liliya_mikhlina/frontend"
   },
   "eslintConfig": {
     "extends": [
