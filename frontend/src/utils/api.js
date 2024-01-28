@@ -113,7 +113,8 @@ function Api(data) {
 const api = new Api({
   baseUrl: 'https://api.liliya.mikhlina.nomoredomainsmonster.ru',
   headers: {
-      'Content-Type': 'application/json'
+      'Content-Type': 'application/json',
+      'Access-Control-Allow-Origin': 'https://liliya.mikhlina.nomoredomainsmonster.ru'
   }
 });
 
