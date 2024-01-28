@@ -16,7 +16,12 @@ const { PORT = 3000 } = process.env;
 
 const app = express();
 
-app.use(cors({ origin: ['http://localhost:3001', 'liliya.mikhlina.nomoredomainsmonster.ru', 'api.liliya.mikhlina.nomoredomainsmonster.ru'], credentials: true }));
+app.use(cors({
+  origin: ['http://localhost:3001', 'liliya.mikhlina.nomoredomainsmonster.ru', 'api.liliya.mikhlina.nomoredomainsmonster.ru'],
+  credentials: true,
+  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+  allowedHeaders: 'Content-Type,Authorization',
+}));
 
 app.use(cookieParser());
 
