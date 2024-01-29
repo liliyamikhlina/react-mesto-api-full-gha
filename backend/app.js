@@ -25,7 +25,7 @@ app.use(helmet());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-mongoose.connect('mongodb://158.160.118.1:27017/mestodb');
+mongoose.connect('mongodb://localhost:27017/mestodb');
 
 app.use(requestLogger);
 
