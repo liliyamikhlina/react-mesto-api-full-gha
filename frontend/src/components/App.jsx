@@ -134,7 +134,7 @@ function App() {
         setCurrentUser(userInfo);
       })
       .catch((err) => console.log(err));
-  }, []);
+  }, [isLoggedIn]);
 
   useEffect(() => {
     api
