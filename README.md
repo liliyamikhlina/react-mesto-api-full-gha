@@ -6,11 +6,3 @@
 Пожалуйста, прикрепите в это описание ссылку на сайт, размещенный на Яндекс.Облаке.
 
 Адрес репозитория: https://github.com/liliyamikhlina/react-mesto-api-full-gha
-
-## Ссылки на проект
-
-IP 158.160.118.1
-
-Frontend https://liliya.mikhlina.nomoredomainsmonster.ru
-
-Backend https://api.liliya.mikhlina.nomoredomainsmonster.ru
